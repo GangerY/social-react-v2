@@ -1,0 +1,85 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background: #fff url("background-title.jpg") repeat;
+}
+.app-wrapper{
+  display: grid;
+
+  grid-template-areas:
+  "h"
+  "m";
+
+  grid-template-rows: 100px 1fr;
+  grid-template-columns: 1fr;
+}
+.header-wrapper{
+  width: 1200px;
+}
+.middle-wrapper{
+  width: 1200px;
+  margin: 0 auto;
+  grid-area: m;
+  display: grid;
+
+  grid-template-areas:
+  "n c"
+  "n c";
+
+  grid-template-columns: 1fr 7fr;
+  grid-template-rows: 1fr;
+
+  background-color: #fff;
+}
+.header{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  grid-area: h;
+  background-color: #111111;
+}
+
+.header img{
+
+}
+
+.main-menu{
+  grid-area: n;
+  background-color: #1A1A1A;
+  margin-right: 15px;
+}
+
+.nav{
+  color: #737373;
+}
+
+.nav > div{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 50px;
+  padding-left: 20px;
+}
+
+.nav > div:hover{
+  background-color: #08BCB6;
+  color: white;
+}
+
+.content{
+  grid-area: c;
+  margin-top: 20px;
+  padding: 0 15px;
+}
+.divid{
+  height: 2px;
+  display: block;
+  background: #d2d2d2;
+  clear: both;
+  margin: 15px 0;
+}
